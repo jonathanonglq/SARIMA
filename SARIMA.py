@@ -7,6 +7,7 @@ import warnings
 import itertools
 import math
 import statsmodels.api as sm
+warnings.filterwarnings("ignore")
 
 ### Intro ###
 
@@ -154,12 +155,12 @@ if isinstance(df, pd.DataFrame) and steps and seasonal_period and ind:
             train, test = df[:train_len], df[train_len:]
 
             # Define the range of values for p, d, q, P, D, Q, and m
-            p_values = range(0, 3)          # Autoregressive order
-            d_values = range(0, 3)          # Differencing order
-            q_values = range(0, 3)          # Moving average order
-            P_values = range(0, 2)          # Seasonal autoregressive order
+            p_values = range(0, 2)          # Autoregressive order
+            d_values = range(0, 2)          # Differencing order
+            q_values = range(0, 2)          # Moving average order
+            P_values = range(0, 1)          # Seasonal autoregressive order
             D_values = range(0, 1)          # Seasonal differencing order
-            Q_values = range(0, 2)          # Seasonal moving average order
+            Q_values = range(0, 1)          # Seasonal moving average order
             m_values = [seasonal_period]    # Seasonal period
 
             param_combinations = list(itertools.product(p_values, 
