@@ -40,12 +40,12 @@ the model parameters used for the forecast, it performs a grid search of model p
 range, and identifies the parameter combination with the best performance (either AIC or RMSE). The ranges used
 for the grid search are as follows:
 
-- **Autoregressive Order (p)**, range from 0 to 3
-- **Differencing Order (d)**, range from 0 to 3
-- **Moving Average Order (q)**, range from 0 to 3
-- **Seasonal Autoregressive Order (P)**, range from 0 to 2
-- **Seasonal Differencing Order (D)**, range from 0 to 1
-- **Seasonal Moving Average Order (Q)**, range from 0 to 2
+- **Autoregressive Order (p)**, range from 0 to 2
+- **Differencing Order (d)**, range from 0 to 2
+- **Moving Average Order (q)**, range from 0 to 2
+- **Seasonal Autoregressive Order (P)**, range from 0 to 1
+- **Seasonal Differencing Order (D)**, fixed at 0
+- **Seasonal Moving Average Order (Q)**, range from 0 to 1
 
 Note: The **seasonal period (m)** is an input by the user.
 """
