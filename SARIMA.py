@@ -160,7 +160,7 @@ if isinstance(df, pd.DataFrame) and steps and seasonal_period and ind:
             q_values = range(0, 3)          # Moving average order
             P_values = range(0, 1)          # Seasonal autoregressive order
             D_values = range(0, 1)          # Seasonal differencing order
-            Q_values = range(0, 1)          # Seasonal moving average order
+            Q_values = range(0, 2)          # Seasonal moving average order
             m_values = [seasonal_period]    # Seasonal period
 
             param_combinations = list(itertools.product(p_values, 
