@@ -178,7 +178,8 @@ if isinstance(df, pd.DataFrame) and steps and seasonal_period and ind:
             best_params_rmse = None
 
             train_rmse_results = {}
-
+            
+            print("start")
             for params in param_combinations:
 
                 order = params[:3]
