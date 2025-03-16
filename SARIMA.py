@@ -7,7 +7,7 @@ import warnings
 import itertools
 import math
 import statsmodels.api as sm
-warnings.filterwarnings("ignore")
+# warnings.filterwarnings("ignore")
 
 ### Intro ###
 
