@@ -59,7 +59,7 @@ st.markdown(
 1. The user uploads a .csv file containing the time series data. This file should contain two columns: the first column
 should store the date (in datetime format), while the second column should store the values to be forecasted. The time step between each row
 of data should be consistent (e.g. monthly data). For optimal performance, the time series data should contain no
-more than 1000 rows of data. A sample of the input .csv file is shown below:
+more than 100 rows of data. A sample of the input .csv file is shown below:
 """
 )
 st.dataframe(df_sample, use_container_width=True)
@@ -160,7 +160,7 @@ if isinstance(df, pd.DataFrame) and steps and seasonal_period and ind:
             q_values = range(0, 3)          # Moving average order
             P_values = range(0, 1)          # Seasonal autoregressive order
             D_values = range(0, 1)          # Seasonal differencing order
-            Q_values = range(0, 2)          # Seasonal moving average order
+            Q_values = range(1, 2)          # Seasonal moving average order
             m_values = [seasonal_period]    # Seasonal period
 
             param_combinations = list(itertools.product(p_values, 
