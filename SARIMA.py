@@ -47,8 +47,10 @@ for the grid search are as follows:
 - **Seasonal Autoregressive Order (P)**, range from 0 to 1
 - **Seasonal Differencing Order (D)**, fixed at 0
 - **Seasonal Moving Average Order (Q)**, range from 0 to 1
+- **Seasonal Period (m)** is an input by the user
 
-Note: The **seasonal period (m)** is an input by the user.
+**Note: Due to computation power limitations associated with free Streamlit web-apps, the grid search ranges have been reduced considerably. 
+For the best results, run the web-app locally with an expanded grid search range.**
 """
 )
 
