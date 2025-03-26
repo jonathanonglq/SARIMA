@@ -79,7 +79,7 @@ are supported:
     imposing a penalty proportional to the number of parameters to discourage overfitting; the formula is defined as AIC = 2 × (number of parameters)
     \- 2 × (log-likelihood). A lower AIC value indicates a preferable model, reflecting an optimal trade-off between predictive accuracy and simplicity.
     
-    - **Root Mean Square Error (RMSE)**: The RMSE is a metric that assesses the accuracy of the model’s predictions by calculating the square root of
+    - **Root Mean Squared Error (RMSE)**: The RMSE is a metric that assesses the accuracy of the model’s predictions by calculating the square root of
     the average squared differences between predicted and actual values. It emphasises larger errors due to the squaring operation and provides a result
     in the same units as the data, offering a direct interpretation of prediction error magnitude.
 
@@ -127,7 +127,7 @@ except:
 st.write("")
 perf_indicator = st.radio(
     "Select performance indicator to optimise for parameter grid search:",
-    ["Akaike Information Criterion (AIC)","Root Mean Square Error (RMSE)"],
+    ["Akaike Information Criterion (AIC)","Root Mean Squared Error (RMSE)"],
     captions=[
         "AIC scores how well the model fits the data while penalising it for being too complicated, with lower scores meaning a better balance of accuracy and simplicity.",
         "RMSE calculates the average distance between the model’s predictions and real values, showing prediction error in the same unit and in a way that is easy to interpret.",
@@ -137,7 +137,7 @@ perf_indicator = st.radio(
 ind =  None
 if perf_indicator == "Akaike Information Criterion (AIC)":
     ind = "AIC"
-elif perf_indicator == "Root Mean Square Error (RMSE)":
+elif perf_indicator == "Root Mean Squared Error (RMSE)":
     ind = "RMSE"
 
 ### Run Forecast ###
